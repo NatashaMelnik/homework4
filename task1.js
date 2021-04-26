@@ -36,39 +36,39 @@ $('img').click(function (e) {    // for image left or right side click
 	}
 });
 
-// let cond1 = false;         
-// let cond2 = false;
+let cond1 = false;         
+let cond2 = false;
 
-// var mousedownFired = false;
+var mousedownFired = false;
 
-// $('.carousel').mousedown(function () {
-// 	cond1 = true;
-// 	xDown = event.clientX;
-// 	mousedownFired = true;
-// });
+$('.carousel').mousedown(function () {
+	cond1 = true;
+	xDown = event.clientX;
+	mousedownFired = true;
+});
 
-// $('.carousel').mousemove(function () {
-// 	cond2 = true;
-// });
+$('.carousel').mousemove(function () {
+	cond2 = true;
+});
 
-// $('.carousel').mouseup(function () {            // for swipe
-// 	event.stopPropagation();
-// 	var xUp = event.clientX;
-// 	if (cond1 && cond2){
-// 		swipe(xUp);
-// 	}
-// 	cond1 = false;
-// 	cond2 = false;
-// });
+$('.carousel').mouseup(function () {            // for swipe
+	event.stopPropagation();
+	var xUp = event.clientX;
+	if (cond1 && cond2){
+		swipe(xUp);
+	}
+	cond1 = false;
+	cond2 = false;
+});
 
-// function swipe(xUp) {
-// 	if (xDown > xUp) {
-// 		rightClick();
-// 	}
-// 	else {
-// 		leftClick();
-// 	}
-// }
+function swipe(xUp) {
+	if (xDown > xUp) {
+		rightClick();
+	}
+	else {
+		leftClick();
+	}
+}
 
 function rightClick() {
 	index = (index < 4) ? index + 1 : (index % 4);
@@ -84,5 +84,5 @@ function leftClick() {
 	slider.style.transform = 'translateX(' + (index) * -20 + '%)';
 }
 
-// event.stopPropagation();
-// event.preventDefault();
+event.stopPropagation();
+event.preventDefault();
